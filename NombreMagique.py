@@ -23,7 +23,7 @@ def clear():
             
         os.system("clear")
     else:
-        ose.system("cls") #gestion  pour windows
+        os.system("cls") #gestion  pour windows
 
 #Affichage bienvenue
 clear()
