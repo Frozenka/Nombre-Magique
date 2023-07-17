@@ -27,7 +27,7 @@ def clear():
 
 #Affichage bienvenue
 clear()
-print("Bienvenue dans le jeux du chiffre magique")
+print("Bienvenue dans le jeu du nombre magique")
 print("Veuillez choisir la difficulté :")
 print(colorama.Fore.BLUE + "1 : Classique")
 print(colorama.Fore.RED  + "2 : Insane\n" + colorama.Style.RESET_ALL)
