@@ -19,7 +19,7 @@ def clear():
     if os.name == "posix": #gestion linux
         os.system("clear")
     else:
-        oss.system("cls") #gestion  pour windows
+        os.system("cls") #gestion  pour windows
 
 AscArt ="""  __  __             _                  _   _           _     
  |  \/  |           (_)                | \ | |         | |    
