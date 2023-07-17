@@ -1,4 +1,5 @@
 # Nombre Magique
+![image](https://github.com/Frozenka/Nombre-Magique/assets/13807685/33333194-a8e0-4f85-a184-a1fa1f85b746)
 
 Ce programme est un jeu du "Nombre Magique" qui a été développé dans le cadre d'un entraînement.
 
