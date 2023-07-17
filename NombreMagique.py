@@ -1,4 +1,5 @@
 #!/usr/bin/ env python3
+# -*- coding: utf-8 -*- 
 """ 
 Programme : Nombre magique
 Créateur  : Frozenk
@@ -20,7 +21,14 @@ def clear():
     else:
         oss.system("cls") #gestion  pour windows
 
-
+AscArt ="""  __  __             _                  _   _           _     
+ |  \/  |           (_)                | \ | |         | |    
+ | \  / | __ _  __ _ _  __ _ _   _  ___|  \| |_ __ ___ | |__  
+ | |\/| |/ _` |/ _` | |/ _` | | | |/ _ \ . ` | '_ ` _ \| '_ \ 
+ | |  | | (_| | (_| | | (_| | |_| |  __/ |\  | | | | | | |_) |
+ |_|  |_|\__,_|\__, |_|\__, |\__,_|\___|_| \_|_| |_| |_|_.__/ 
+                __/ |     | |                                 
+               |___/      |_|                                 """
 #Message "du jour"
 banners = [
     "!! Bienvenue dans le jeu du chiffre magique !!",
@@ -35,11 +43,13 @@ banners = [
     "!! Êtes-vous prêt à percer le secret du nombre mystère ? !!"
 ]
 
+
 #Affichage bienvenue
 clear()
+print(AscArt)
 Msg_jour = random.choice(banners)
 print(Msg_jour)
-print("Veuillez choisir la difficulté :")
+print("\nVeuillez choisir la difficulté :")
 print(colorama.Fore.BLUE + "1 : Classique")
 print(colorama.Fore.RED  + "2 : Insane\n" + colorama.Style.RESET_ALL)
 
