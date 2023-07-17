@@ -16,18 +16,29 @@ menu_ok        =  False
 #Fonction effacement console
 def clear():
     if os.name == "posix": #gestion linux
-        if importlib.util.find_spec("colorama") is None:
-            import pip
-            pip.main(['install','colorama'])
-            print("installation de colorama")
-            
         os.system("clear")
     else:
-        os.system("cls") #gestion  pour windows
+        oss.system("cls") #gestion  pour windows
+
+
+#Message "du jour"
+banners = [
+    "!! Bienvenue dans le jeu du chiffre magique !!",
+    "!! Le jeu du chiffre magique vous souhaite la bienvenue !!",
+    "!! Prêt à deviner le nombre magique ? !!",
+    "!! Voyons si vous pouvez trouver le nombre magique !!",
+    "!! Essayez de deviner le nombre mystère !!",
+    "!! Bienvenue dans notre jeu de devinette !!",
+    "!! Pouvez-vous trouver le nombre secret ? !!",
+    "!! Préparez-vous à défier le nombre magique !!",
+    "!! Entrez dans l'univers mystérieux du chiffre magique !!",
+    "!! Êtes-vous prêt à percer le secret du nombre mystère ? !!"
+]
 
 #Affichage bienvenue
 clear()
-print("Bienvenue dans le jeu du nombre magique")
+Msg_jour = random.choice(banners)
+print(Msg_jour)
 print("Veuillez choisir la difficulté :")
 print(colorama.Fore.BLUE + "1 : Classique")
 print(colorama.Fore.RED  + "2 : Insane\n" + colorama.Style.RESET_ALL)
@@ -40,7 +51,10 @@ def Dificult(Nb_max,Nb_try,Dificile):
     Nombre_magique = random.randint(1, Nb_max)
     Victoire       =  False
  
-
+    if importlib.util.find_spec("colorama") is None:
+        import pip
+        pip.main(['install','colorama'])
+        print("installation de colorama")
 
     # Gestion du cas ou un utilisateur ne rentre pas un entier
     while Victoire == False and Nb_try >= 1:
