@@ -1,25 +1,29 @@
-#!/usr/bin/python3
+#!/usr/bin/ env python3
 """ 
 Programme : Nombre magique
 Créateur  : Frozenk
 Interet   : Entrainement
 Date      : 17/01/2023
 """
-
 #imports
 import random
 import colorama
 import os
-
+import importlib
 #déclarations
 menu_ok        =  False
 
 #Fonction effacement console
 def clear():
-    if os.name == "posix": #gestion effacement console pour linux
+    if os.name == "posix": #gestion linux
+        if importlib.util.find_spec("colorama") is None:
+            import pip
+            pip.main(['install','colorama'])
+            print("installation de colorama")
+            
         os.system("clear")
     else:
-        ose.system("cls") #gestion effacement console pour windows
+        ose.system("cls") #gestion  pour windows
 
 #Affichage bienvenue
 clear()
@@ -36,6 +40,8 @@ def Dificult(Nb_max,Nb_try,Dificile):
     Nombre_magique = random.randint(1, Nb_max)
     Victoire       =  False
  
+
+
     # Gestion du cas ou un utilisateur ne rentre pas un entier
     while Victoire == False and Nb_try >= 1:
         try:
